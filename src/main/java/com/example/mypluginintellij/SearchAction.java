@@ -21,6 +21,7 @@ public class SearchAction extends AnAction {
         CaretModel caretModel = editor.getCaretModel();
         String selectedText = caretModel.getCurrentCaret().getSelectedText();
 
+
         String query = selectedText.replace(' ', '+') + languageTag;
         BrowserUtil.browse("https://stackoverflow.com/search?q=" + query);
     }
